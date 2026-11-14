@@ -253,9 +253,13 @@ label fantastic:
     show bg final fight
     Y "Help! 4 people are beating me up!"
     A "You are bad and the four of us are fantastic..."
+    "But here's the thing"
+    show thing
+    pause 4.0
     jump credits
 
 label credits: 
+    hide thing
     show bg aftermath 
     $ quick_menu = False
     window hide
