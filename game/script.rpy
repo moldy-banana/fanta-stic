@@ -82,6 +82,7 @@ label bestfriend2:
 label brother1:
     scene bg brothercandle
     "You walk into the living room to see your brother watching hell's kitchen"
+    show brother normal
     B "This is a very good episode… Do you need something?"
     menu: 
         "Have you seen the candles?": 
@@ -102,9 +103,12 @@ label brother2b:
     jump brother3
 
 label brother3: 
+    hide brother normal
     "You exit the room"
+    show bg black
     Y "Time to light this place up."
     "You light an absurd amount of candles"
+     
     "You stand on the hill, watching the flames lick the sky."
     jump aftermath
 
