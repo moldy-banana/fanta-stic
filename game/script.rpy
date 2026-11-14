@@ -8,12 +8,12 @@ define B = Character("Brother", color="#32201f")
 define C = Character("Cousin", color="#1e0c82")
 define F = Character("Best friend", color="#145109")
 image cousin normal = "cousinnormal-removebg-preview.png"
-image brothercandle = "bg brother-candle.png"
+image bg brothercandle = "bg brother-candle.png"
 
 # The game starts here.
 
 label start:
-    play music "audio/Jazz at Mladost Club - Caravan.mp3"
+    queue music ["audio/Jazz at Mladost Club - Caravan.mp3", "audio/VibeDepot - Romantic Music.mp3"]
     # Show a background. This uses a placeholder by default, but you can
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
@@ -80,7 +80,7 @@ label bestfriend2:
     jump aftermath
 
 label brother1:
-    scene bg brothercandle
+    show bg brothercandle
     "You walk into the living room to see your brother watching hell's kitchen"
     show brother normal
     B "This is a very good episode… Do you need something?"
@@ -108,11 +108,28 @@ label brother3:
     show bg black
     Y "Time to light this place up."
     "You light an absurd amount of candles"
-     
+    show bg burninghouse
     "You stand on the hill, watching the flames lick the sky."
     jump aftermath
 
 
 label aftermath:
+    show bg black
+    "It is done. The inheritance is yours now. "
+    menu: 
+        "What are you going to do with it? "
+        "Go to dinner":
+            "Nobody’s going to go with you."
+            jump aftermathO
 
+
+        "Throw a party":
+            "Who are you going to invite?"
+            jump aftermathO
+
+        "Make an instagram post for your new bugatti": 
+            "Nobody likes your post."
+            jump aftermathO
+label aftermathO: 
+    
   
