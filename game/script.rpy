@@ -10,6 +10,7 @@ define F = Character("Best friend", color="#145109")
 define H = Character("Host", color="#d6ddb6")
 define A = Character("All", color="#ffffff00")
 image cousin normal = "cousinnormal-removebg-preview.png"
+image cousin mad = "cousinmad-removebg-preview.png"
 image bg brothercandle = "bg brother-candle.png"
 image bg graveyardflower = "bg graveyard-flower.png"
 
@@ -118,6 +119,9 @@ label brother3:
 
 
 label aftermath:
+    hide cousin 
+    hide brother 
+    hide bestfriend
     stop music
     show bg black
     "It is done. The inheritance is yours now. "
@@ -146,7 +150,11 @@ label aftermathO:
     jump afterlife
 
 label afterlife: 
+    hide cousin 
+    hide brother 
+    hide bestfriend
     show bg black
+    play music "leberch-eerie-580863.mp3"
     "It's quiet. Was dying always this calm? You feel a cold breeze past your shoulder. You open your eyes."
     show bg afterlife
     "You're standing on the clouds. It's so vast and empty, but there are a few buildings in the distance. Where are you going?"
@@ -219,6 +227,7 @@ label afterlifeGrocery:
 
 label afterlifeOffice:
     show bg office
+    show cousin mad
     "The office cubicles repeat over and over again."
     Y "What are you doing here?"
     C "You poisoned me over money, you suck."
@@ -232,6 +241,10 @@ label afterlifeOffice:
 
 
 label fantastic: 
+    hide cousin 
+    hide brother 
+    hide bestfriend
+    play music "strawberry_candy-sport-intense-metal-fast-and-strong-622134.mp3"
     "You wander in the afterlife alone after getting your brutally shut down when four figures pull up."
     "You ignore them at first, but you swear you've seen them somewhere."
     Y "Cousin? Brother? Friend?"
@@ -240,3 +253,17 @@ label fantastic:
     show bg final fight
     Y "Help! 4 people are beating me up!"
     A "You are bad and the four of us are fantastic..."
+    jump credits
+
+label credits: 
+    show bg aftermath 
+    $ quick_menu = False
+    window hide
+    show text "CREDITS: Kayla, Ellie, Sebastian"
+    pause 6.0 
+    hide text 
+    show text "Made for hackclub haven!"
+    pause 6.0
+    hide text 
+    show bg doomsday
+    return
