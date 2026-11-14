@@ -3,7 +3,11 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define e = Character("Eileen")
+define Y = Character("You", color="#82140c")
+define B = Character("Brother", color="#32201f")
+define C = Character("Cousin", color="#1e0c82")
+define F = Character("Best friend", color="#145109")
+
 
 
 # The game starts here.
@@ -14,19 +18,19 @@ label start:
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
 
-    scene bg room
+    scene bday
 
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
 
-    show eileen happy
+    # show eileen happy
 
     # These display lines of dialogue.
 
-    e "You've created a new Ren'Py game."
+    "Everyone’s here to celebrate Grandma’s birthday. You have other motives "
 
-    e "Once you add a story, pictures, and music, you can release it to the world!"
+    Y "Everyone is gathered here today... this might be my only chance. How should I do it?"
 
     # This ends the game.
 
