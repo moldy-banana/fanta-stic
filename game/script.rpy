@@ -7,6 +7,7 @@ define Y = Character("You", color="#82140c")
 define B = Character("Brother", color="#32201f")
 define C = Character("Cousin", color="#1e0c82")
 define F = Character("Best friend", color="#145109")
+define H = Character("Host", color="#d6ddb6")
 image cousin normal = "cousinnormal-removebg-preview.png"
 image bg brothercandle = "bg brother-candle.png"
 image bg graveyardflower = "bg graveyard-flower.png"
@@ -91,7 +92,7 @@ label brother1:
         "It's a little dark in here isn't it?":
             jump brother2b
 label brother2a: 
-    B "Yeah they’re right here. How many do you need?"
+    B "Yeah they're right here. How many do you need?"
     Y "Just give me all of them."
     B "Okay… just be careful. We don't want a fire during G-ma's birthday party, do we?"
     jump brother3
@@ -120,7 +121,7 @@ label aftermath:
     menu: 
         "What are you going to do with it? "
         "Go to dinner":
-            "Nobody’s going to go with you."
+            "Nobody's going to go with you."
             jump aftermathO
 
 
@@ -133,7 +134,7 @@ label aftermath:
             jump aftermathO
 label aftermathO:
     " Never mind then. The house is quiet. You sit on the couch. Your older brother's favorite show Heaven's Kitchen is playing on the television." 
-    "" " \"You idiot sandwich!\" , says Rordon Gamsey on the screen, you stiffen."
+    "" " \"You idiot sandwich!\" says Rordon Gamsey on the screen, you stiffen."
     "What have you done? Your hands are still covered in blood."
     show bg graveyard1
     "You spend the rest of your life atoning for your sins."
@@ -152,6 +153,75 @@ label afterlife:
         "The tall building":
             jump afterlifeGrocery
         "The wide building":
-            jump afterlife 
+            jump afterlifeOffice
+
+label afterlifeKitchen:
+    "This place looks familiar"
+    show bg kitchentable
+    show angel normal
+    H "Welcome to Heaven's Kitchen! The afterlife's favorite cooking show."
+    Y "Heaven's kitchen?"
+    H "That's right!! Here are your contestants!"
+    hide angel normal
+    show brother mad
+    "You can't believe your eyes. Your brother is standing right in front of you"
+    Y "Brother? Is it really you?"
+    B "Yeah, I guess it is"
+    Y "Look, I just want to say-"
+    B "Whatever man, just go away. Leave me to my peaceful afterlife."
+    menu: 
+        "Do you…"
+        "Apologize":
+            jump apology
+        "Fight him": 
+            jump brotherFight
+label apology: 
+    Y "Listen man, I'm really sorry about the whole killing thing. I was crazy and I just want to say I'm a changed man and totally turned my life around before I died."
+    B "You think I care about any of that? I loved you and trusted you! And You betrayed me! You betrayed all of us!"
+    Y "And that is my biggest regret to this day."
+    B "..."
+    Y "I'm sorry."
+    B "Did you come here expecting for me to forgive you? You're crazy. I don't forgive you. Get out of my sight."
+    "You leave reluctantly, but what were you expecting?"
+    jump fantastic
+    
+label brotherFight:
+    Y "Leave you alone? After not seeing me for so long? Come at me bro"
+    B "You psycho, do you really expect me to welcome you here after what happened?"
+    Y "That was when I was younger. This is the afterlife!"
+    B "You have some nerve. Leave now. Prepare for your demise."
+    "Did you think you were a good fighter? What were you expecting? You lie there bloodied and bruised, and your consciousness fades away..."
+    show bg black
+    jump fantastic
+    
+
+
+label afterlifeGrocery:
+    show bg grocery
+    "The freezers in the grocery store hummed to life. It felt cold."
+    "Behind the isles, you see someone."
+    show bestfriend anger1
+    F "…it's you"
+    Y "Listen, it's been a while, and I just want to say that I've changed for the better."
+    F "I trusted you and you killed me. You didn't even have a good reason, you psycho!!"
+    Y "It's been a while, friend. I just wanted to apologize..."
+Best Friend: Well let  me tell you right now I have not been able to rest for my entire afterlife because of your actions
+Player: Please forgive me! I feel terrible!
+Best Friend: See you later, friend
+Narrator: The unfortunate ending to an unfortunate friendship
+
+
+label afterlifeOffice:
+    show bg office
+    "The office cubicles repeat over and over again."
+    Y "What are you doing here?"
+    C "You poisoned me over money, you suck."
+    Y "I'm sorry, I've grown as a person and I swear I've changed."
+    C "So what? I'm tired of hearing your dumb excuses."
+    Y "..."
+    Y "Okay."
+    C "Leave."
+    jump fantastic
+
 
   
