@@ -1,2 +1,4 @@
 # fanta-stic
-A visual novel created in ren'py
+A visual novel about a troubled character who bounces back, but faces the wrath of the people he hurt in the afterlife. <br>
+This game was created in ren'py <br>
+Made by Ellie, Sebastian, and Kayla
