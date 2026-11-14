@@ -8,6 +8,7 @@ define B = Character("Brother", color="#32201f")
 define C = Character("Cousin", color="#1e0c82")
 define F = Character("Best friend", color="#145109")
 define H = Character("Host", color="#d6ddb6")
+define A = Character("All", color="#ffffff00")
 image cousin normal = "cousinnormal-removebg-preview.png"
 image bg brothercandle = "bg brother-candle.png"
 image bg graveyardflower = "bg graveyard-flower.png"
@@ -79,6 +80,7 @@ label bestfriend2:
     show bestfriend disappointed
     F "Fine by me then. We're still meeting up on Wednesday for game night, right? "
     "You nod and take the knife out of the block. It's heavy in your hands. You know what to do now."
+    hide bestfriend
     jump aftermath
 
 label brother1:
@@ -116,6 +118,7 @@ label brother3:
 
 
 label aftermath:
+    stop music
     show bg black
     "It is done. The inheritance is yours now. "
     menu: 
@@ -198,17 +201,20 @@ label brotherFight:
 
 label afterlifeGrocery:
     show bg grocery
-    "The freezers in the grocery store hummed to life. It felt cold."
+    "The freezers in the grocery store hummed to life. It feels cold."
     "Behind the isles, you see someone."
     show bestfriend anger1
-    F "…it's you"
-    Y "Listen, it's been a while, and I just want to say that I've changed for the better."
-    F "I trusted you and you killed me. You didn't even have a good reason, you psycho!!"
-    Y "It's been a while, friend. I just wanted to apologize..."
-Best Friend: Well let  me tell you right now I have not been able to rest for my entire afterlife because of your actions
-Player: Please forgive me! I feel terrible!
-Best Friend: See you later, friend
-Narrator: The unfortunate ending to an unfortunate friendship
+    F "...it's you."
+    Y "Listen- it's been a while, and I just want to say that I'm sorry."
+    F "You don't have the right to say that. You're a psychopath."
+    Y "I just wanted to apologize..."
+    show bestfriend anger2
+    F "For what? You can't do something like that and expect me to forgive you. "
+    F "Just to make yourself feel better? You're worse than I thought."
+    Y "..."
+    F "Get out of my sight."
+    hide bestfriend 
+    "The freezers in the grocery store hum. It's cold."
 
 
 label afterlifeOffice:
@@ -221,7 +227,16 @@ label afterlifeOffice:
     Y "..."
     Y "Okay."
     C "Leave."
+    "The office ignores you."
     jump fantastic
 
 
-  
+label fantastic: 
+    "You wander in the afterlife alone after getting your brutally shut down when four figures pull up."
+    "You ignore them at first, but you swear you've seen them somewhere."
+    Y "Cousin? Brother? Friend?"
+    A "It's over."
+    "They jump you all at once. You have no time to react."
+    show bg final fight
+    Y "Help! 4 people are beating me up!"
+    A "You are bad and the four of us are fantastic..."
