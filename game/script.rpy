@@ -9,6 +9,7 @@ define C = Character("Cousin", color="#1e0c82")
 define F = Character("Best friend", color="#145109")
 image cousin normal = "cousinnormal-removebg-preview.png"
 image bg brothercandle = "bg brother-candle.png"
+image bg graveyardflower = "bg graveyard-flower.png"
 
 # The game starts here.
 
@@ -130,6 +131,27 @@ label aftermath:
         "Make an instagram post for your new bugatti": 
             "Nobody likes your post."
             jump aftermathO
-label aftermathO: 
-    
+label aftermathO:
+    " Never mind then. The house is quiet. You sit on the couch. Your older brother's favorite show Heaven's Kitchen is playing on the television." 
+    "" " \"You idiot sandwich!\" , says Rordon Gamsey on the screen, you stiffen."
+    "What have you done? Your hands are still covered in blood."
+    show bg graveyard1
+    "You spend the rest of your life atoning for your sins."
+    show bg graveyardflower
+    "You visit the graveyard every week, placing fresh flowers on the headstones. You never turned yourself in. Your consciousness slowly fades away at the age of 92 in a nice hospital. "
+    jump afterlife
+
+label afterlife: 
+    show bg black
+    "It's quiet. Was dying always this calm? You feel a cold breeze past your shoulder. You open your eyes."
+    show bg afterlife
+    "You're standing on the clouds. It's so vast and empty, but there are a few buildings in the distance. Where are you going?"
+    menu: 
+        "The long building":
+            jump afterlifeKitchen
+        "The tall building":
+            jump afterlifeGrocery
+        "The wide building":
+            jump afterlife 
+
   
