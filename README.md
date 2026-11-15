@@ -4,7 +4,7 @@ A (totally serious) visual novel about a troubled character who bounces back, bu
 ### How to play: 
 Click "Run game" on [keltime.itch.io/fanta-stic](https://keltime.itch.io/fanta-stic) and enjoy!
 
-This game was created in Ren'py <br>
+This game was created in Ren'py and was meant to be played multiple times.<br>
 
 ### Credits
 Made by Ellie, Sebastian, and Kayla for Hack Club Haven in 12 hours with the theme "Bounce Back".
